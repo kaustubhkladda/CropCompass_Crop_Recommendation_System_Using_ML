@@ -100,14 +100,18 @@ st.set_page_config(
 st.markdown(
     f"""
     <style>
-    .stApp {{ background: {C_BG}; color: #1c2b24; }}
     .block-container {{ padding-top: 1.6rem; padding-bottom: 3rem; max-width: 1250px; }}
     header[data-testid="stHeader"] {{ background: transparent; }}
 
     /* Sidebar */
     section[data-testid="stSidebar"] {{ background: {C_DARK}; }}
     section[data-testid="stSidebar"] * {{ color: #e8f5ec; }}
-    section[data-testid="stSidebar"] [data-baseweb="select"] * {{ color: #1c2b24; }}
+    section[data-testid="stSidebar"] [data-baseweb="select"] > div {{
+        background: rgba(255,255,255,0.10) !important;
+        border: 1px solid rgba(255,255,255,0.28) !important;
+    }}
+    section[data-testid="stSidebar"] [data-baseweb="select"] * {{ color: #e8f5ec !important; }}
+    section[data-testid="stSidebar"] [data-baseweb="select"] svg {{ fill: #e8f5ec !important; }}
     section[data-testid="stSidebar"] hr {{ border-color: rgba(255,255,255,0.15); }}
 
     /* Hero banner */
@@ -140,6 +144,7 @@ st.markdown(
         background: #fff; border-radius: 16px; padding: 18px 20px;
         box-shadow: 0 4px 14px rgba(0,0,0,0.06); margin-bottom: 12px;
     }}
+    .card {{ color: #1c2b24; }}
     .card h4 {{ margin: 0 0 6px 0; color: {C_DARK}; }}
     .muted {{ color: #6b7d73; font-size: 0.92rem; }}
 
@@ -153,6 +158,7 @@ st.markdown(
         background: #fff; border-radius: 12px; padding: 10px 14px; margin-bottom: 8px;
         border-left: 5px solid {C_LIGHT}; box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }}
+    .seg {{ color: #1c2b24; }}
     .seg.now {{ border-left-color: {C_MID}; background: {C_SOFT}; }}
 
     /* Metrics */
@@ -165,11 +171,6 @@ st.markdown(
 
     /* Tabs */
     button[data-baseweb="tab"] {{ font-weight: 600; }}
-    button[data-baseweb="tab"] p {{ color: #3d5a4c !important; font-weight: 600; }}
-    button[data-baseweb="tab"][aria-selected="true"] p {{ color: {C_MID} !important; }}
-    [data-testid="stMain"] [data-testid="stMarkdownContainer"],
-    [data-testid="stMain"] [data-testid="stCaptionContainer"],
-    [data-testid="stMain"] label p {{ color: #1c2b24; }}
     .footer {{ text-align:center; color:#8a9a91; font-size:0.82rem; margin-top:36px; }}
     </style>
     """,
