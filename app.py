@@ -106,12 +106,20 @@ st.markdown(
     /* Sidebar */
     section[data-testid="stSidebar"] {{ background: {C_DARK}; }}
     section[data-testid="stSidebar"] * {{ color: #e8f5ec; }}
-    section[data-testid="stSidebar"] [data-baseweb="select"] > div {{
-        background: rgba(255,255,255,0.10) !important;
-        border: 1px solid rgba(255,255,255,0.28) !important;
+    section[data-testid="stSidebar"] [data-baseweb="select"] {{
+        background-color: #2c5e4c !important;
+        border-radius: 8px !important;
     }}
-    section[data-testid="stSidebar"] [data-baseweb="select"] * {{ color: #e8f5ec !important; }}
-    section[data-testid="stSidebar"] [data-baseweb="select"] svg {{ fill: #e8f5ec !important; }}
+    section[data-testid="stSidebar"] [data-baseweb="select"] div,
+    section[data-testid="stSidebar"] [data-baseweb="select"] input {{
+        background-color: transparent !important;
+        border-color: rgba(255,255,255,0.28) !important;
+    }}
+    section[data-testid="stSidebar"] [data-baseweb="select"] * {{
+        color: #f1faf4 !important;
+        -webkit-text-fill-color: #f1faf4 !important;
+    }}
+    section[data-testid="stSidebar"] [data-baseweb="select"] svg {{ fill: #f1faf4 !important; }}
     section[data-testid="stSidebar"] hr {{ border-color: rgba(255,255,255,0.15); }}
 
     /* Hero banner */
